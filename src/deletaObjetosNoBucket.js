@@ -4,7 +4,7 @@ const client = new S3Client({});
 
 async function deleteObject(objeto) {
   const command = new DeleteObjectsCommand({
-    Bucket: "bucketawsparazabbix-teste",
+    Bucket: "Bucket name",
     Delete: {
       Objects: [{ Key: objeto }],
     },
