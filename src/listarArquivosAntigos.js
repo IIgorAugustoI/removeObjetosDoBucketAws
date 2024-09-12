@@ -17,6 +17,7 @@ export default function listarArquivosAntigos(datas) {
     if (moment(datasArquivosDoBucket[i][1]).isBefore(dataDeCorteDosBackups))
       arquivosAhSeremDeletados.push(datasArquivosDoBucket[i].input);
   }
+  if (arquivosAhSeremDeletados.length == 0) return;
   arquivosAhSeremDeletados.forEach((arquivo) => {
     deletaObjetosNoBucket(arquivo);
   });
